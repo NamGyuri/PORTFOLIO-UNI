@@ -1,3 +1,18 @@
+@font-face {font-family: 'Noto Sans KR';font-style: normal;font-weight: 100;src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.woff2) format('woff2'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.woff) format('woff'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.otf) format('opentype');}
+
+@font-face {font-family: 'Noto Sans KR';font-style: normal;font-weight: 300;src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.woff2) format('woff2'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.woff) format('woff'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.otf) format('opentype');}
+
+@font-face {font-family: 'Noto Sans KR';font-style: normal;font-weight: 400;src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2) format('woff2'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff) format('woff'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf) format('opentype');}
+
+@font-face {font-family: 'Noto Sans KR';font-style: normal;font-weight: 500;src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.woff2) format('woff2'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.woff) format('woff'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.otf) format('opentype');}
+
+@font-face {font-family: 'Noto Sans KR';font-style: normal;font-weight: 700;src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff2) format('woff2'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff) format('woff'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.otf) format('opentype');}
+
+@font-face {font-family: 'Noto Sans KR';font-style: normal;font-weight: 900;src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.woff2) format('woff2'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.woff) format('woff'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.otf) format('opentype');}
+
+body, h1, h2, h3, h4, h5, h6, input, textarea, select {
+    font-family: 'Noto Sans KR', sans-serif;
+}
 *{
     margin: 0;
     padding:0;
@@ -7,19 +22,135 @@ body{
     background-color: #2A9BF4;
     -ms-overflow-style: none;
 }
+a{
+    text-decoration: none;
+    color:white;
+}
 ::-webkit-scrollbar{
     display: none;
 }
+.abso{
+    position:absolute;
+    font-size: 20px;
+    color:#fff;
+}
+.abso:hover{
+    cursor: pointer;
+}
+.abso-home{
+    top:22px;
+    left:40px;
+}
+.home{
+    display: inline-block;
+    position: relative;
+    padding-bottom:1px;
+}
+.home::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color:white;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+.home:hover::after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.abso-about{
+    top:30px;
+    right:35px;
+}
+.about{
+    writing-mode:vertical-lr;
+    text-orientation: upright;
+    letter-spacing:2px;
+    display: inline-block;
+    position: relative;
+}
+.about::after{
+    content:'';
+    position: absolute;
+    height: 100%;
+    transform: scaleY(0);
+    width: 2px;
+    top: 0;
+    left: 0;
+    background-color:rgb(255, 255, 255);
+    transform-origin: bottom left;
+    transition: transform 0.25s ease-out;
+}
+.about:hover::after{
+    transform: scaleY(1);
+    transform-origin: top left;
+}
+.abso-pro{
+    bottom:31px;
+    right:40px;
+}
+.project{
+    letter-spacing: 1px;
+    display: inline-block;
+    position: relative;
+}
+.project::after{
+    content:'';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height:2px;
+    top:0;
+    left:0;
+    background-color: white;
+    transform-origin: top left;
+    transition: transform 0.25s ease-out;
+}
+.project:hover::after{
+    transform: scaleX(1);
+    transform-origin: top right;
+}
+.abso-con{
+    bottom:31px;
+    left:35px;
+}
+.contact{
+    writing-mode:vertical-lr;
+    text-orientation:upright;
+    letter-spacing:2px;
+    display:inline-block;
+    position:relative;
+}
+.contact::after{
+    content:'';
+    position:absolute;
+    height:100%;
+    transform: scaleY(0);
+    width:2px;
+    top:0;
+    right:0;
+    background-color: rgb(255, 255, 255);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+.contact:hover::after{
+    transform: scaleY(1);
+    transform-origin: top right;
+}
 .droppage{
-    width:100vw;
-    height:100vh;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
 }
 .container{
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+    /* min-height: 100vh; */
     padding:50px 0;
 }
 .drop{
