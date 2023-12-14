@@ -1,24 +1,6 @@
-@font-face {font-family: 'Noto Sans KR';font-style: normal;font-weight: 100;src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.woff2) format('woff2'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.woff) format('woff'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.otf) format('opentype');}
 
-@font-face {font-family: 'Noto Sans KR';font-style: normal;font-weight: 300;src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.woff2) format('woff2'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.woff) format('woff'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.otf) format('opentype');}
-
-@font-face {font-family: 'Noto Sans KR';font-style: normal;font-weight: 400;src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2) format('woff2'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff) format('woff'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf) format('opentype');}
-
-@font-face {font-family: 'Noto Sans KR';font-style: normal;font-weight: 500;src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.woff2) format('woff2'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.woff) format('woff'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.otf) format('opentype');}
-
-@font-face {font-family: 'Noto Sans KR';font-style: normal;font-weight: 700;src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff2) format('woff2'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff) format('woff'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.otf) format('opentype');}
-
-@font-face {font-family: 'Noto Sans KR';font-style: normal;font-weight: 900;src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.woff2) format('woff2'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.woff) format('woff'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.otf) format('opentype');}
-
-body, h1, h2, h3, h4, h5, h6, input, textarea, select {
-    font-family: 'Noto Sans KR', sans-serif;
-}
-*{
-    margin: 0px;
-    padding:0px;
-    box-sizing: border-box;
-}
 body{
+    height:100vh;
     background-color: #2A9BF4;
     -ms-overflow-style: none;
 }
@@ -31,7 +13,7 @@ a{
 }
 .t_coding{
     position:relative;
-    animation: fadeout 1s 3s ease-out forwards;
+    animation: fadeout 1s 1.8s ease-out forwards;
 }
 @keyframes fadeout{
     100%{
@@ -52,7 +34,7 @@ a{
 .t_design{
     position:relative;
     opacity: 0;
-    animation:fadein 4s 3.5s ease-out backwards;
+    animation:fadein 3s 2.5s ease-out backwards;
 }
 @keyframes fadein{
     0%{
@@ -247,141 +229,20 @@ a{
     width:5px;
     height:5px;
 }
-
-.abso{
-    position:absolute;
-    font-size: 20px;
-    color:#fff;
-}
-.abso:hover{
-    cursor: pointer;
-}
-.abso-home{
-    top:22px;
-    left:40px;
-}
-.home{
-    display: inline-block;
-    position: relative;
-    padding-bottom:1px;
-}
-.home::after{
-    content: '';
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color:white;
-    transform-origin: bottom right;
-    transition: transform 0.25s ease-out;
-}
-.home:hover::after{
-    transform: scaleX(1);
-    transform-origin: bottom left;
-}
-
-.abso-about{
-    top:30px;
-    right:35px;
-}
-.about{
-    writing-mode:vertical-lr;
-    text-orientation: upright;
-    letter-spacing:-2px;
-    display: inline-block;
-    position: relative;
-}
-.about::after{
-    content:'';
-    position: absolute;
-    height: 100%;
-    transform: scaleY(0);
-    width: 2px;
-    top: 0;
-    left: 0;
-    background-color:rgb(255, 255, 255);
-    transform-origin: bottom left;
-    transition: transform 0.25s ease-out;
-}
-.about:hover::after{
-    transform: scaleY(1);
-    transform-origin: top left;
-}
-.abso-pro{
-    bottom:31px;
-    right:40px;
-}
-.project{
-    letter-spacing: 1px;
-    display: inline-block;
-    position: relative;
-}
-.project::after{
-    content:'';
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height:2px;
-    top:0;
-    left:0;
-    background-color: white;
-    transform-origin: top left;
-    transition: transform 0.25s ease-out;
-}
-.project:hover::after{
-    transform: scaleX(1);
-    transform-origin: top right;
-}
-.abso-con{
-    bottom:31px;
-    left:35px;
-}
-.contact{
-    writing-mode:vertical-lr;
-    text-orientation:upright;
-    letter-spacing:-2px;
-    display:inline-block;
-    position:relative;
-}
-.contact::after{
-    content:'';
-    position:absolute;
-    height:100%;
-    transform: scaleY(0);
-    width:2px;
-    top:0;
-    right:0;
-    background-color: rgb(255, 255, 255);
-    transform-origin: bottom right;
-    transition: transform 0.25s ease-out;
-}
-.contact:hover::after{
-    transform: scaleY(1);
-    transform-origin: top right;
-}
-
-.key_rotate{
+.image_container{
     position:absolute;
     top:50%;
     left:50%;
-    opacity:0;
     transform: translate(-50%, -50%);
-    animation:imgshow 1s 7s ease-out forwards;
+    opacity:0;
+    animation:imgshow 1s 4s ease-out forwards;
 }
 @keyframes imgshow{
     100%{
         opacity: 1;
     }
 }
-.key{
-    width:465px;
-    height:465px;
-    animation:rotate_img 18s ease-in-out infinite;
-    transform-origin: 50% 50%;
-}
-@keyframes rotate_img{
+/* @keyframes rotate_img{
     0%{
         transform: rotate(0deg);
     }
@@ -391,7 +252,7 @@ a{
     100%{
         transform: rotate(-360deg);
     }
-}
+} */
 
 /* video{
     position: absolute;
@@ -417,3 +278,32 @@ a{
     text-orientation: upright;
     letter-spacing: 3px;
 } */
+
+
+.target{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: inline-block;
+    transform: translate(-50%, -50%) rotate(0deg);
+    opacity:0;
+    animation:imgshow 1s 5.5s ease-out forwards;
+}
+@keyframes imgshow{
+    100%{
+        opacity: 1;
+    }
+}
+.target>img{
+    width:400px;
+    height:400px;
+}
+  
+.target:after{
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: -15px;
+    transform: rotate(45deg);
+    width: 0px; height: 0px;
+}
